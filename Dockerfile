@@ -10,4 +10,6 @@ COPY . .
 
 EXPOSE 80
 
+VOLUME [ "/usr/src/app/feedback" ]
+
 CMD [ "node", "server.js" ]
