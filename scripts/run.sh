@@ -1,5 +1,1 @@
-docker run -d -p 3000:80 --rm --name feedback-app \
--v feedback:/usr/src/app/feedback \
--v "$(pwd):/usr/src/app:ro" \
--v /app/temp \
-feedback-node:volumes
+docker run -d -p 3000:8000 --rm --name feedback-app --env PORT=8000 -v feedback:/usr/src/app/feedback -v "$(pwd):/usr/src/app:ro" -v /app/temp feedback-node:env
