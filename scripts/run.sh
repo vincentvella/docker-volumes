@@ -1,1 +1,1 @@
-docker run -d -p 3000:8000 --rm --name feedback-app --env PORT=8000 -v feedback:/usr/src/app/feedback -v "$(pwd):/usr/src/app:ro" -v /app/temp feedback-node:env
+docker run -d -p 3000:8000 --rm --name feedback-app --env-file ./.env  -v feedback:/usr/src/app/feedback -v "$(pwd):/usr/src/app:ro" -v /app/temp feedback-node:env
